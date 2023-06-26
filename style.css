@@ -16,9 +16,13 @@
 body {
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
+
+    font-family: 'Jet Brains Mono', monospace;
     font-weight: 700;
-    /* width: 100vh; */
+}
+
+.calc-btn {
+    font-size: 125%;
 }
 
 .father {
@@ -27,8 +31,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /* width: 100%; */
-
 }
 
 .father>* {
@@ -38,12 +40,6 @@ body {
     font-weight: inherit;
 }
 
-
-
-
-
-
-
 .master {
     display: flex;
     align-items: center;
@@ -51,48 +47,31 @@ body {
     /* height: 100vh; */
 }
 
-
-
-
-
-
-
-
-
 .part_one {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(6, 65px);
-
     gap: 3px;
     align-content: center;
     justify-content: center;
 }
 
 .part_one>button {
-    /* align-items: center; */
     cursor: pointer;
-
     border-radius: 7.5px;
-
     font-family: inherit;
     font-weight: inherit;
 }
 
-
 .gap_between {
     width: 30px;
 }
-
-
-
 
 .part_two {
     display: grid;
     grid-template-columns: repeat(4, 65px);
     grid-template-rows: repeat(6, 65px);
     gap: 3px;
-    /* height: 100%; */
     align-content: center;
     justify-content: center;
 }
@@ -106,8 +85,6 @@ body {
     font-family: inherit;
     font-weight: inherit;
 }
-
-
 
 .settings-icon {
     display: flex;
@@ -130,27 +107,10 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.calc-btn {
-    font-size: 125%;
-}
-
-
 .output {
     font-size: 125%;
     width: 705px;
-    /* max-width: 705px; */
+
     min-height: 100px;
 
     margin-bottom: 3px;
@@ -159,7 +119,7 @@ body {
     background-color: var(--secondary);
     color: var(--primary);
     border-radius: 7.5px;
-    padding: 2%;
+    padding: 1rem;
 
     display: flex;
     align-items: flex-end;
@@ -168,6 +128,12 @@ body {
 
     word-wrap: break-word;
     word-break: break-all;
+}
+
+
+#query {
+    color: var(--primary);
+    opacity: 80%;
 }
 
 .output .previous-operand {
@@ -246,6 +212,9 @@ body {
     .part_one {
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: repeat(6, 45px);
+
+        font-family: 'Jet Brains Mono', monospace;
+        font-weight: 700;
     }
 
     .gap_between {
@@ -257,10 +226,59 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: repeat(6, 45px);
+
+        font-family: 'Jet Brains Mono', monospace;
+        font-weight: 700;
     }
 
     .settings-icon>* {
         height: 1.5rem;
     }
 
+}
+
+
+
+@media (max-height: 550px) {
+    .master {
+        flex-direction: row;
+    }
+
+    .calc-btn {
+        font-size: 60%;
+    }
+
+
+    .output {
+        font-size: 80%;
+    }
+
+    .output {
+        max-width: 415px;
+    }
+
+    .part_one {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(6, 35px);
+
+        font-family: 'Jet Brains Mono', monospace;
+        font-weight: 700;
+    }
+
+    .gap_between {
+        width: 20px;
+    }
+
+    .part_two {
+        display: grid;
+        grid-template-columns: repeat(4, 35px);
+        grid-template-rows: repeat(6, 35px);
+
+        font-family: 'Jet Brains Mono', monospace;
+        font-weight: 700;
+    }
+
+    .settings-icon>* {
+        height: 1.5rem;
+    }
 }
