@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Jet Brains Mono', monospace;
+}
+
+:root {
+    --primary: #EAF5FF;
+    --secondary: #00417D;
+    --white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    font-weight: 700;
+    /* width: 100vh; */
+}
+
+.father {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* width: 100%; */
+
+}
+
+.father>* {
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+
+
+
+
+
+
+.master {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+
+
+
+
+
+
+
+
+.part_one {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(6, 65px);
+
+    gap: 3px;
+    align-content: center;
+    justify-content: center;
+}
+
+.part_one>button {
+    /* align-items: center; */
+    cursor: pointer;
+
+    border-radius: 7.5px;
+
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+
+.gap_between {
+    width: 30px;
+}
+
+
+
+
+.part_two {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: repeat(6, 65px);
+    gap: 3px;
+    /* height: 100%; */
+    align-content: center;
+    justify-content: center;
+}
+
+.part_two>button {
+    align-items: center;
+    cursor: pointer;
+
+    border-radius: 7.5px;
+
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+
+
+.settings-icon {
+    display: flex;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+}
+
+.settings-icon>* {
+    height: 2rem;
+    fill: var(--secondary);
+    cursor: pointer;
+}
+
+.settings-icon>*:hover {
+    opacity: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calc-btn {
+    font-size: 125%;
+}
+
+
+.output {
+    font-size: 125%;
+    width: 705px;
+    /* max-width: 705px; */
+    min-height: 100px;
+
+    margin-bottom: 3px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 7.5px;
+    padding: 2%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    align-self: flex-start;
+}
+
+/* button-styles */
+
+.solid-btn {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+}
+
+.border-btn {
+    background-color: var(--white);
+    color: var(--secondary);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--primary);
+}
+
+.special-btn {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+}
+
+.equal-btn {
+    grid-area: 6/3/7/5;
+}
+
+/* hover-section */
+
+.border-btn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--secondary);
+}
+
+.solid-btn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--secondary);
+}
+
+.special-btn:hover {
+    opacity: 25%;
+}
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+
+    .master {
+        flex-direction: column;
+    }
+
+    .calc-btn {
+        font-size: 80%;
+    }
+
+
+    .output {
+        font-size: 90%;
+    }
+
+    .output {
+        max-width: 290px;
+    }
+
+    .part_one {
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(6, 45px);
+    }
+
+    .gap_between {
+        /* width: 3px; */
+        height: 5px;
+    }
+
+    .part_two {
+        display: grid;
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(6, 45px);
+    }
+
+    .settings-icon>* {
+        height: 1.5rem;
+    }
+
+}
