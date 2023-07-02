@@ -168,31 +168,34 @@ body {
     grid-area: 6/3/7/5;
 }
 
-/* hover-section */
-
-.border-btn:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
-    border-color: var(--secondary);
-}
-
-.solid-btn:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
-    border-color: var(--secondary);
-}
-
-.special-btn:hover {
-    opacity: 25%;
-}
-
-
-
 
 
 
 
 @media (max-width: 700px) {
+
+
+
+
+    .border-btn:active {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .solid-btn:active {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .special-btn:active {
+        opacity: 25%;
+    }
+
+
+
+
 
     .master {
         flex-direction: column;
@@ -220,7 +223,6 @@ body {
     }
 
     .gap_between {
-        /* width: 3px; */
         height: 5px;
     }
 
@@ -242,6 +244,23 @@ body {
 
 
 @media (max-height: 550px) {
+
+    .border-btn:active {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .solid-btn:active {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .special-btn:active {
+        opacity: 25%;
+    }
+
     .master {
         flex-direction: row;
     }
@@ -284,3 +303,35 @@ body {
         height: 1.5rem;
     }
 }
+
+@media (hover: hover) {
+
+    .border-btn:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .solid-btn:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+        border-color: var(--secondary);
+    }
+
+    .special-btn:hover {
+        opacity: 25%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
