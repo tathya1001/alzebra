@@ -19,6 +19,8 @@ body {
 
     font-family: 'Jet Brains Mono', monospace;
     font-weight: 700;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .calc-btn {
