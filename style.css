@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Jet Brains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono";
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -14,10 +15,8 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
 
-    font-family: 'Jet Brains Mono', monospace;
+    font-family: inherit;
     font-weight: 700;
 
     -webkit-tap-highlight-color: transparent;
@@ -32,24 +31,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-
-.father>* {
-    cursor: pointer;
-
-    font-family: inherit;
-    font-weight: inherit;
+    height: 100svh;
 }
 
 .master {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 100vh; */
 }
 
 .part_one {
+    font-family: inherit;
+
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(6, 65px);
@@ -66,7 +59,7 @@ body {
 }
 
 .gap_between {
-    width: 30px;
+    width: 1rem;
 }
 
 .part_two {
@@ -78,7 +71,7 @@ body {
     justify-content: center;
 }
 
-.part_two>button {
+.part_two button {
     align-items: center;
     cursor: pointer;
 
@@ -110,18 +103,20 @@ body {
 
 
 .output {
-    font-size: 125%;
-    width: 705px;
+    font-size: 150%;
+    width: 43.5rem;
 
     min-height: 100px;
 
-    margin-bottom: 3px;
+    margin-bottom: 1rem;
     grid-column: 1/-1;
     grid-row: 2/3;
     background-color: var(--secondary);
-    color: var(--primary);
+    color: var(--white);
     border-radius: 7.5px;
     padding: 1rem;
+
+    border: solid 0.2rem var(--secondary);
 
     display: flex;
     align-items: flex-end;
@@ -135,12 +130,12 @@ body {
 
 #query {
     color: var(--primary);
-    opacity: 80%;
+    opacity: 65%;
 }
 
-.output .previous-operand {
+/* .output .previous-operand {
     align-self: flex-start;
-}
+} */
 
 /* button-styles */
 
@@ -148,6 +143,8 @@ body {
     background-color: var(--primary);
     color: var(--secondary);
     border: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .border-btn {
@@ -156,16 +153,22 @@ body {
     border-width: 3px;
     border-style: solid;
     border-color: var(--primary);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .special-btn {
     background-color: var(--secondary);
     color: var(--primary);
     border: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .equal-btn {
     grid-area: 6/3/7/5;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 
@@ -174,8 +177,9 @@ body {
 
 @media (max-width: 700px) {
 
-
-
+    body {
+        font-family: "JetBrains Mono";
+    }
 
     .border-btn:active {
         background-color: var(--secondary);
@@ -193,32 +197,31 @@ body {
         opacity: 25%;
     }
 
-
-
+    .output .previous-operand {
+        align-self: flex-start;
+    }
 
 
     .master {
+        font-family: inherit;
         flex-direction: column;
     }
 
     .calc-btn {
-        font-size: 90%;
+        font-size: 100%;
     }
 
 
     .output {
-        font-size: 90%;
-    }
-
-    .output {
+        font-size: 100%;
         max-width: 290px;
+        padding: 0.5rem;
     }
 
     .part_one {
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: repeat(6, 45px);
 
-        font-family: 'Jet Brains Mono', monospace;
         font-weight: 700;
     }
 
@@ -231,107 +234,43 @@ body {
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: repeat(6, 45px);
 
-        font-family: 'Jet Brains Mono', monospace;
         font-weight: 700;
-    }
-
-    .settings-icon>* {
-        height: 1.5rem;
     }
 
 }
 
 
 
-@media (max-height: 550px) {
-
-    .border-btn:active {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-color: var(--secondary);
-    }
-
-    .solid-btn:active {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-color: var(--secondary);
-    }
-
-    .special-btn:active {
-        opacity: 25%;
-    }
-
-    .master {
-        flex-direction: row;
-    }
-
-    .calc-btn {
-        font-size: 70%;
-    }
-
-
-    .output {
-        font-size: 80%;
-    }
-
-    .output {
-        max-width: 415px;
-    }
-
-    .part_one {
-        grid-template-columns: repeat(4, 60px);
-        grid-template-rows: repeat(6, 35px);
-
-        font-family: 'Jet Brains Mono', monospace;
-        font-weight: 700;
-    }
-
-    .gap_between {
-        width: 20px;
-    }
-
-    .part_two {
-        display: grid;
-        grid-template-columns: repeat(4, 35px);
-        grid-template-rows: repeat(6, 35px);
-
-        font-family: 'Jet Brains Mono', monospace;
-        font-weight: 700;
-    }
-
-    .settings-icon>* {
-        height: 1.5rem;
-    }
+.border-btn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--secondary);
+    transition: 0.25s;
 }
 
-@media (hover: hover) {
+.solid-btn:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-color: var(--secondary);
+    transition: 0.25s;
+}
 
-    .border-btn:hover {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-color: var(--secondary);
-    }
+.special-btn:hover {
+    opacity: 25%;
+    transition: 0.25s;
+}
 
-    .solid-btn:hover {
-        background-color: var(--secondary);
-        color: var(--primary);
-        border-color: var(--secondary);
-    }
-
-    .special-btn:hover {
-        opacity: 25%;
-    }
-
-
+button:focus {
+    animation: clickEffect 0.25s ease-in-out;
 }
 
 
+@keyframes clickEffect {
+    50% {
+        transform: scale(0.8)
+    }
 
-
-
-
-
-
-
-
-
+    100% {
+        transform: scale(1)
+    }
+}
